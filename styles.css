@@ -1,0 +1,79 @@
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    background: url('background1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.clock {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.menu {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu button {
+    background-color: #b3d9ff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.menu button:hover {
+    background-color: #99ccff;
+}
+
+.menu-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.record {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.playing {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
